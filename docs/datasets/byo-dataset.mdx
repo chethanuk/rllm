@@ -7,7 +7,7 @@ There are three ways to point `rllm eval` and `rllm train` at a dataset that isn
 
 | Path | Use when | What you write |
 |------|----------|----------------|
-| **Ad-hoc directory** | one-off; experiment doesn't need to be redistributed | a folder on disk |
+| **Ad-hoc directory** | one-off; experiment doesn't need to be redistributed | a folder on disk | Each row's `id` becomes its GRPO group key. |
 | **Builder + catalog entry** | you want `rllm dataset pull <name>` to work for collaborators | a builder function + a registry row |
 | **Harbor package** | you're publishing a task suite for broad consumption | a Harbor-format git repo |
 

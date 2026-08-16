@@ -94,7 +94,7 @@ Each training iteration runs through these stages:
   </Step>
 
   <Step title="Compute advantages">
-    Trajectories are grouped by `{task_id}:{trajectory.name}`. The RL algorithm (GRPO, REINFORCE, etc.) compares rewards within each group to compute advantages — determining which rollouts were better than average.
+    Trajectories are grouped by `{task_id}:{trajectory.name}` where `{task_id}` comes from the episode ID (`{task_id}:{rollout_idx}`). Note that `task_id` may contain colons, but trajectory names must not. The RL algorithm (GRPO, REINFORCE, etc.) compares rewards within each group to compute advantages — determining which rollouts were better than average.
   </Step>
 
   <Step title="Update policy">
